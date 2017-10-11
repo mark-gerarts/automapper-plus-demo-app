@@ -1,0 +1,11 @@
+services:
+    # Controllers
+    demo.index_controller:
+        class: Demo\Controller\IndexController
+        arguments:
+            - '@automapper_plus.mapper'
+
+    # Configurators
+    demo.automapper_configurator:
+        class: Demo\AutoMapperConfig
+        tags: ['automapper_plus.configurator']

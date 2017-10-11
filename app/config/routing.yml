@@ -1,0 +1,4 @@
+demo.home:
+    path:     '/'
+    defaults:
+        _controller: demo.index_controller
