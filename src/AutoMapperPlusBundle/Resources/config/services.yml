@@ -1,16 +1,15 @@
 services:
+    _defaults:
+        public: true
+
     automapper_plus.configuration:
         class: AutoMapperPlus\Configuration\AutoMapperConfig
-        public: true
-        shared: true
 
     automapper_plus.mapper_factory:
         class: AutoMapperPlus\AutoMapperPlusBundle\AutoMapperFactory
         arguments:
-            - '@service_container'
+            - '@automapper_plus.configuration'
 
     automapper_plus.mapper:
         class: AutoMapperPlus\AutoMapper
-        public: true
-        arguments:
-            - '@automapper_plus.configuration'
+        factory: ['@automapper_plus.mapper_factory', create]

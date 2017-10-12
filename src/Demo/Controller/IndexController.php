@@ -29,7 +29,6 @@ class IndexController
      */
     function __invoke(Request $request)
     {
-        dump($this->autoMapper);
         return new Response("Hello, world!");
     }
 }

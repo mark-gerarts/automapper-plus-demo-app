@@ -3,24 +3,44 @@
 namespace AutoMapperPlus\AutoMapperPlusBundle;
 
 use AutoMapperPlus\AutoMapper;
-use AutoMapperPlus\Configuration\AutoMapperConfig;
-use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\DependencyInjection\ContainerInterface;
+use AutoMapperPlus\AutoMapperInterface;
+use AutoMapperPlus\Configuration\AutoMapperConfigInterface;
 
+/**
+ * Class AutoMapperFactory
+ *
+ * @package AutoMapperPlus\AutoMapperPlusBundle
+ */
 class AutoMapperFactory
 {
     /**
-     * @var ContainerInterface
+     * @var AutoMapperConfigInterface
      */
-    private $container;
+    private $config;
 
-    public function __construct(ContainerInterface $container)
+    /**
+     * AutoMapperFactory constructor.
+     *
+     * @param AutoMapperConfigInterface $config
+     */
+    public function __construct(AutoMapperConfigInterface $config)
     {
-        $this->container = $container;
+        $this->config = $config;
     }
 
-    public function create()
+    /**
+     * @param AutoMapperConfiguratorInterface $configurator
+     */
+    public function addConfigureCallback(AutoMapperConfiguratorInterface $configurator)
     {
-        return new AutoMapper(new AutoMapperConfig());
+        $configurator->configure($this->config);
+    }
+
+    /**
+     * @return AutoMapperInterface
+     */
+    public function create(): AutoMapperInterface
+    {
+        return new AutoMapper($this->config);
     }
 }
