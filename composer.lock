@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b24ccf18bba8f793affc2f219b1ef388",
+    "content-hash": "b3c83aaada27375f6c0666e5c6db26e3",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -1175,6 +1175,50 @@
             ],
             "description": "An AutoMapper for PHP",
             "time": "2017-10-11T16:47:10+00:00"
+        },
+        {
+            "name": "mark-gerarts/automapper-plus-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mark-gerarts/automapper-plus-bundle.git",
+                "reference": "a30de0bfbed692ddc768dce841fa27e31a1a86e5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mark-gerarts/automapper-plus-bundle/zipball/a30de0bfbed692ddc768dce841fa27e31a1a86e5",
+                "reference": "a30de0bfbed692ddc768dce841fa27e31a1a86e5",
+                "shasum": ""
+            },
+            "require": {
+                "mark-gerarts/auto-mapper-plus": "@dev",
+                "php": ">=7.0.0",
+                "symfony/framework-bundle": "^3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "AutoMapperPlus\\AutoMapperPlusBundle\\": [
+                        ""
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Gerarts",
+                    "email": "mark.gerarts@gmail.com"
+                }
+            ],
+            "description": "A Symfony bundle for AutoMapper+",
+            "keywords": [
+                "automapper",
+                "bundle"
+            ],
+            "time": "2017-10-12T15:46:51+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -2559,7 +2603,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "mark-gerarts/auto-mapper-plus": 20
+        "mark-gerarts/auto-mapper-plus": 20,
+        "mark-gerarts/automapper-plus-bundle": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
