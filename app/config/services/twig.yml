@@ -1,0 +1,6 @@
+services:
+    demo.file_loader:
+        class: Demo\Twig\FileLoaderExtension
+        tags: ['twig.extension']
+        arguments:
+            - '%kernel.project_dir%'

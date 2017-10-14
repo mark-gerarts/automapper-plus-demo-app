@@ -9,3 +9,23 @@
         </div>
     </div>
 {% endmacro %}
+
+{% macro code_sample_file(title, file, link = null) %}
+    {%
+        include 'includes/code_sample.html.twig' with {
+            'title': title,
+            'code': show_file(file),
+            'link': link
+        }
+    %}
+{% endmacro %}
+
+{% macro code_sample_snippet(title, snippet, link = null) %}
+    {%
+        include 'includes/code_sample.html.twig' with {
+            'title': title,
+            'code': show_snippet(snippet),
+            'link': link
+        }
+    %}
+{% endmacro %}

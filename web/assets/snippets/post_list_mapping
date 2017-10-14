@@ -1,0 +1,5 @@
+$allPosts = $this->postRepository->findAll();
+$allPosts = $this->mapper->mapMultiple(
+    $allPosts,
+    PostListViewModel::class
+);

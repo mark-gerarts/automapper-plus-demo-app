@@ -12,7 +12,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 class CreatePostViewModel
 {
     /**
-     * @Assert\NotNull()
+     * @Assert\NotBlank()
      */
     public $title;
 

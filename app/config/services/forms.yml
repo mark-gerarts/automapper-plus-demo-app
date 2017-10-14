@@ -7,4 +7,4 @@ services:
             - '@demo.form.type.create_post'
     demo.form.type.create_post:
         class: Demo\ViewModel\Post\CreatePostViewModel
-        private: true
+        public: false

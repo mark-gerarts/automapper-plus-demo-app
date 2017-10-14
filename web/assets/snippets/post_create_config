@@ -1,0 +1,4 @@
+$config->registerMapping(
+    CreatePostViewModel::class,
+    Post::class
+);

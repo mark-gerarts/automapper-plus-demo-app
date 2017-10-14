@@ -28,6 +28,27 @@
 
             {# Side notes#}
             <div class="col-md-6">
+                {{
+                    macro.code_sample_file(
+                        'ViewModel',
+                        'ViewModel/Post/PostListViewModel.php',
+                        'https://github.com/mark-gerarts/automapper-plus-demo-app/blob/master/src/Demo/ViewModel/Post/PostListViewModel.php'
+                    )
+                }}
+                {{
+                    macro.code_sample_snippet(
+                        'Configuration',
+                        'post_list_config',
+                        'https://github.com/mark-gerarts/automapper-plus-demo-app/blob/master/src/Demo/AutoMapperConfig.php'
+                    )
+                }}
+                {{
+                    macro.code_sample_snippet(
+                        'Mapping',
+                        'post_list_mapping',
+                        'https://github.com/mark-gerarts/automapper-plus-demo-app/blob/master/src/Demo/Controller/Blog/IndexController.php'
+                    )
+                }}
             </div>
         </div>
     </div>

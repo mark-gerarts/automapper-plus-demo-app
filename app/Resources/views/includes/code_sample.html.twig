@@ -1,0 +1,15 @@
+<div>
+    <p>
+        {% if link is not empty %}
+            <a href="{{ link }}" class="inherit" target="_blank">
+                <strong>{{ title }}</strong>
+                <i class="fa fa-external-link"></i>
+            </a>
+        {% else %}
+            <strong>{{ title }}</strong>
+        {% endif %}
+    </p>
+    {% if code is not empty %}
+        <pre><code>{{ code }}</code></pre>
+    {% endif %}
+</div>
