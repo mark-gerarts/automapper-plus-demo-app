@@ -13,3 +13,11 @@ services:
             - '@templating'
             - '@automapper_plus.mapper'
             - '@demo.repository.post'
+
+    demo.blog.edit:
+        class: Demo\Controller\Blog\EditPostController
+        arguments:
+            - '@demo.form.edit_post'
+            - '@templating'
+            - '@automapper_plus.mapper'
+            - '@demo.repository.post'

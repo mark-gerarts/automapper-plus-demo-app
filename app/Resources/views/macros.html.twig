@@ -3,7 +3,9 @@
         <div class="panel-body">
             <p>
                 <strong>{{ post.title }}</strong>
-                <a href="#" class="pull-right inherit"><i class="fa fa-pencil"></i></a>
+                <a href="{{ path('demo.blog.edit', {'id': post.id}) }}" class="pull-right inherit">
+                    <i class="fa fa-pencil"></i>
+                </a>
             </p>
             <p class="text-muted">Author Name - {{ post.created }}</p>
         </div>

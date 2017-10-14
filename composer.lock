@@ -1137,12 +1137,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mark-gerarts/automapper-plus.git",
-                "reference": "52fdc1730f185ce0eafa3b8a8bfe7dfb45451623"
+                "reference": "1cd7779f305705d7a71bc4cd7ac834822ea5cc89"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mark-gerarts/automapper-plus/zipball/52fdc1730f185ce0eafa3b8a8bfe7dfb45451623",
-                "reference": "52fdc1730f185ce0eafa3b8a8bfe7dfb45451623",
+                "url": "https://api.github.com/repos/mark-gerarts/automapper-plus/zipball/1cd7779f305705d7a71bc4cd7ac834822ea5cc89",
+                "reference": "1cd7779f305705d7a71bc4cd7ac834822ea5cc89",
                 "shasum": ""
             },
             "require": {
@@ -1179,7 +1179,7 @@
                 "converter",
                 "object-to-object"
             ],
-            "time": "2017-10-14T16:08:41+00:00"
+            "time": "2017-10-14T21:21:59+00:00"
         },
         {
             "name": "mark-gerarts/automapper-plus-bundle",

@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% import 'macros.html.twig' as macro %}
+
+{% block body %}
+    <div class="container">
+        <ul class="breadcrumb">
+            <li><a href="{{ path('demo.home') }}">Home</a></li>
+            <li><a href="{{ path('demo.blog.index') }}">Blog</a></li>
+            <li class="active">Edit post</li>
+        </ul>
+
+        <div class="row">
+            <div class="col-md-6">
+                {{ form_start(form) }}
+                    {{ form_widget(form) }}
+                    <a class="btn btn-default" type="reset" href="{{ path('demo.blog.index') }}">Cancel</a>
+                    <button class="btn btn-success" type="submit">Save</button>
+                {{ form_end(form) }}
+            </div>
+            <div class="col-md-6">
+                {{
+                    macro.code_sample_file(
+                        'ViewModel',
+                        'ViewModel/Post/EditPostViewModel.php',
+                        'https://github.com/mark-gerarts/automapper-plus-demo-app/blob/master/src/Demo/ViewModel/Post/EditPostViewModel.php'
+                    )
+                }}
+                {{
+                    macro.code_sample_snippet(
+                        'Configuration',
+                        'post_edit_config',
+                        'https://github.com/mark-gerarts/automapper-plus-demo-app/blob/master/src/Demo/AutoMapperConfig.php'
+                    )
+                }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

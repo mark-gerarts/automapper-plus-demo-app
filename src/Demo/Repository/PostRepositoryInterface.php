@@ -22,4 +22,10 @@ interface PostRepositoryInterface
      *   The inserted ID.
      */
     public function insert(Post $post): int;
+
+    /**
+     * @param Post $post
+     * @return void
+     */
+    public function update(Post $post): void;
 }

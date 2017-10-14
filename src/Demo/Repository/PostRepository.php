@@ -33,4 +33,13 @@ class PostRepository extends EntityRepository implements PostRepositoryInterface
 
         return $post->getId();
     }
+
+    /**
+     * @inheritdoc
+     */
+    public function update(Post $post): void
+    {
+        $post = $this->getEntityManager()->merge($post);
+        $this->insert($post);
+    }
 }

@@ -6,6 +6,7 @@ use AutoMapperPlus\AutoMapperPlusBundle\AutoMapperConfiguratorInterface;
 use AutoMapperPlus\Configuration\AutoMapperConfigInterface;
 use Demo\Model\Post;
 use Demo\ViewModel\Post\CreatePostViewModel;
+use Demo\ViewModel\Post\EditPostViewModel;
 use Demo\ViewModel\Post\PostListViewModel;
 
 /**
@@ -17,14 +18,26 @@ class AutoMapperConfig implements AutoMapperConfiguratorInterface
 {
     /**
      * @inheritdoc
+     *
+     * All the config in is put one file for convenience reasons. Alternatively,
+     * you could create multiple class that implement the interface, and add the
+     * tag in their service definitions.
      */
     public function configure(AutoMapperConfigInterface $config): void
     {
-        $config->registerMapping(Post::class, PostListViewModel::class)
+        // List view.
+        $config
+            ->registerMapping(Post::class, PostListViewModel::class)
             ->forMember('created', function (Post $source) {
                 return $source->getCreated()->format('j F, Y');
             });
 
+        // Create.
         $config->registerMapping(CreatePostViewModel::class, Post::class);
+
+        // Update.
+        $config
+            ->registerMapping(Post::class, EditPostViewModel::class)
+            ->reverseMap();
     }
 }

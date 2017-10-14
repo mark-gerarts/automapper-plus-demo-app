@@ -4,7 +4,9 @@ services:
         factory: ['@form.factory', create]
         arguments:
             - 'Demo\Form\CreatePostType'
-            - '@demo.form.type.create_post'
-    demo.form.type.create_post:
-        class: Demo\ViewModel\Post\CreatePostViewModel
-        public: false
+
+    demo.form.edit_post:
+        class: Symfony\Component\Form\Form
+        factory: ['@form.factory', create]
+        arguments:
+            - 'Demo\Form\EditPostType'

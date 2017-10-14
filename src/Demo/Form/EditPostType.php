@@ -2,18 +2,19 @@
 
 namespace Demo\Form;
 
-use Demo\ViewModel\Post\CreatePostViewModel;
+use Demo\ViewModel\Post\EditPostViewModel;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 /**
- * Class CreatePostType
+ * Class EditPostType
  *
  * @package Demo\Form
  */
-class CreatePostType extends AbstractType
+class EditPostType extends AbstractType
 {
     /**
      * @inheritdoc
@@ -21,7 +22,7 @@ class CreatePostType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => CreatePostViewModel::class,
+            'data_class' => EditPostViewModel::class,
             'required' => false
         ]);
     }
@@ -32,6 +33,7 @@ class CreatePostType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+            ->add('id', HiddenType::class)
             ->add('title')
             ->add('body', TextareaType::class);
     }

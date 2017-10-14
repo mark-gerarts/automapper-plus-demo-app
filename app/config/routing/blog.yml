@@ -7,3 +7,8 @@ demo.blog.create:
     path:       '/new'
     defaults:
         _controller: demo.blog.create
+
+demo.blog.edit:
+    path:       '/{id}/edit'
+    defaults:
+        _controller: demo.blog.edit
