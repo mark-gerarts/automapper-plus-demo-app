@@ -5,12 +5,12 @@ namespace Demo\Controller\Blog;
 use AutoMapperPlus\AutoMapperInterface;
 use Demo\Model\Post;
 use Demo\Repository\PostRepositoryInterface;
+use Demo\Response\RedirectToRouteResponse;
 use Demo\Util\FlashTrait;
 use Symfony\Bundle\FrameworkBundle\Templating\EngineInterface;
 use Symfony\Component\Form\Form;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Routing\RouterInterface;
 
 /**
  * Class CreatePostController
@@ -32,11 +32,6 @@ class CreatePostController
     private $createPostForm;
 
     /**
-     * @var RouterInterface
-     */
-    private $router;
-
-    /**
      * @var AutoMapperInterface
      */
     private $mapper;
@@ -51,7 +46,6 @@ class CreatePostController
      *
      * @param Form $createPostForm
      * @param EngineInterface $templating
-     * @param RouterInterface $router
      * @param AutoMapperInterface $mapper
      * @param PostRepositoryInterface $postRepository
      */
@@ -59,14 +53,12 @@ class CreatePostController
     (
         Form $createPostForm,
         EngineInterface $templating,
-        RouterInterface $router,
         AutoMapperInterface $mapper,
         PostRepositoryInterface $postRepository
     )
     {
         $this->templating = $templating;
         $this->createPostForm = $createPostForm;
-        $this->router = $router;
         $this->mapper = $mapper;
         $this->postRepository = $postRepository;
     }
@@ -90,7 +82,7 @@ class CreatePostController
                 'Created <em>' . strip_tags($post->getTitle()) . '</em>'
             );
 
-            return new RedirectResponse($this->router->generate('demo.blog.index'));
+            return new RedirectToRouteResponse('demo.blog.index');
         }
 
         return $this->templating->renderResponse('blog/create.html.twig', [

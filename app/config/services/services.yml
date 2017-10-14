@@ -3,3 +3,11 @@ services:
     demo.automapper_configurator:
         class: Demo\AutoMapperConfig
         tags: ['automapper_plus.configurator']
+
+    # Redirect event listener
+    demo.event_listener.redirect_to_route:
+        class: Demo\EventListener\RedirectToRouteListener
+        arguments:
+            - '@router.default'
+        tags:
+            - { name: kernel.event_listener, event: kernel.response, method: onKernelResponse }

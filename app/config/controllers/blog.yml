@@ -11,6 +11,5 @@ services:
         arguments:
             - '@demo.form.create_post'
             - '@templating'
-            - '@router.default'
             - '@automapper_plus.mapper'
             - '@demo.repository.post'
