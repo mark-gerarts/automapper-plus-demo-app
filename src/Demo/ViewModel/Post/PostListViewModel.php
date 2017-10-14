@@ -10,4 +10,5 @@ namespace Demo\ViewModel\Post;
 class PostListViewModel
 {
     public $title;
+    public $created;
 }

@@ -1,1 +1,11 @@
-
+{% macro post_card(post) %}
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <p>
+                <strong>{{ post.title }}</strong>
+                <a href="#" class="pull-right inherit"><i class="fa fa-pencil"></i></a>
+            </p>
+            <p class="text-muted">Author Name - {{ post.created }}</p>
+        </div>
+    </div>
+{% endmacro %}

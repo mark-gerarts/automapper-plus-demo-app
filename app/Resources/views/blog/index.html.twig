@@ -1,5 +1,7 @@
 {% extends 'base.html.twig' %}
 
+{% import 'macros.html.twig' as macro %}
+
 {% block body %}
     <div class="container">
         <ul class="breadcrumb">
@@ -12,17 +14,15 @@
         <div class="row">
             {# Blog post overview #}
             <div class="col-md-6">
-                <a href="{{ path('demo.blog.create') }}" class="btn btn-success btn-lg btn-block">
+                <a href="{{ path('demo.blog.create') }}"
+                   class="btn btn-success btn-block add-new"
+                >
                     <i class="fa fa-file pull-left"></i>New blog post
                 </a>
 
-                {% if posts is not empty %}
-                <ul>
-                    {% for post in posts %}
-                        <li>{{ post.title }}</li>
-                    {% endfor %}
-                </ul>
-                {% endif %}
+                {% for post in posts %}
+                    {{ macro.post_card(post) }}
+                {% endfor %}
 
             </div>
 
