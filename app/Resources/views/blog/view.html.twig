@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <ul class="breadcrumb">
+            <li><a href="{{ path('demo.home') }}">Home</a></li>
+            <li><a href="{{ path('demo.blog.index') }}">Blog</a></li>
+            <li class="active">{{ post.title }}</li>
+        </ul>
+
+        <h1>{{ post.title }}</h1>
+        <p class="text-muted">{{ post.created }}</p>
+        <p>{{ post.body }}</p>
+    </div>
+{% endblock %}

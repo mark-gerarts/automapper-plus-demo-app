@@ -12,3 +12,8 @@ demo.blog.edit:
     path:       '/{id}/edit'
     defaults:
         _controller: demo.blog.edit
+
+demo.blog.view:
+    path:       '/{id}'
+    defaults:
+        _controller: demo.blog.view

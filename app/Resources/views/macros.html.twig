@@ -2,7 +2,11 @@
     <div class="panel panel-default">
         <div class="panel-body">
             <p>
-                <strong>{{ post.title }}</strong>
+                <strong>
+                    <a href="{{ path('demo.blog.view', {'id': post.id}) }}" class="inherit">
+                        {{ post.title }}
+                    </a>
+                </strong>
                 <a href="{{ path('demo.blog.edit', {'id': post.id}) }}" class="pull-right inherit">
                     <i class="fa fa-pencil"></i>
                 </a>

@@ -21,3 +21,9 @@ services:
             - '@templating'
             - '@automapper_plus.mapper'
             - '@demo.repository.post'
+
+    demo.blog.view:
+        class: Demo\Controller\Blog\ViewController
+        arguments:
+            - '@automapper_plus.mapper'
+            - '@templating'

@@ -7,6 +7,7 @@ use AutoMapperPlus\Configuration\AutoMapperConfigInterface;
 use Demo\Model\Post;
 use Demo\ViewModel\Post\CreatePostViewModel;
 use Demo\ViewModel\Post\EditPostViewModel;
+use Demo\ViewModel\Post\PostDetailViewModel;
 use Demo\ViewModel\Post\PostListViewModel;
 
 /**
@@ -28,6 +29,12 @@ class AutoMapperConfig implements AutoMapperConfiguratorInterface
         // List view.
         $config
             ->registerMapping(Post::class, PostListViewModel::class)
+            ->forMember('created', function (Post $source) {
+                return $source->getCreated()->format('j F, Y');
+            });
+
+        // Detail view
+        $config->registerMapping(Post::class, PostDetailViewModel::class)
             ->forMember('created', function (Post $source) {
                 return $source->getCreated()->format('j F, Y');
             });
