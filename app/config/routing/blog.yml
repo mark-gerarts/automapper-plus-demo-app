@@ -1,0 +1,4 @@
+demo.blog.index:
+    path:       '/'
+    defaults:
+        _controller: demo.blog.index

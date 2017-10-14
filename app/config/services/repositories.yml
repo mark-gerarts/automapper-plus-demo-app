@@ -1,0 +1,6 @@
+services:
+    demo.repository.post:
+        class: Demo\Repository\PostRepository
+        factory: Doctrine\ORM\EntityManagerInterface:getRepository
+        arguments:
+            - 'Demo\Model\Post'

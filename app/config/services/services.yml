@@ -1,0 +1,5 @@
+services:
+    # Configurators
+    demo.automapper_configurator:
+        class: Demo\AutoMapperConfig
+        tags: ['automapper_plus.configurator']

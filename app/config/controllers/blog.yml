@@ -1,0 +1,7 @@
+services:
+    demo.blog.index:
+        class: Demo\Controller\Blog\IndexController
+        arguments:
+            - '@demo.repository.post'
+            - '@automapper_plus.mapper'
+            - '@templating'

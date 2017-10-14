@@ -1,0 +1,14 @@
+Demo\Model\Post:
+    type: entity
+    repositoryClass: Demo\Repository\PostRepository
+    table: post
+    id:
+        id:
+            type: integer
+            generator: { strategy: auto }
+    fields:
+        title:
+            type: string
+            length: 255
+        body:
+            type: text

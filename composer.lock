@@ -503,16 +503,16 @@
         },
         {
             "name": "doctrine/doctrine-cache-bundle",
-            "version": "1.3.1",
+            "version": "1.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineCacheBundle.git",
-                "reference": "cfc629363a4a1d7b3f21c4689c53aa05519eed52"
+                "reference": "9baecbd6bfdd1123b0cf8c1b88fee0170a84ddd1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineCacheBundle/zipball/cfc629363a4a1d7b3f21c4689c53aa05519eed52",
-                "reference": "cfc629363a4a1d7b3f21c4689c53aa05519eed52",
+                "url": "https://api.github.com/repos/doctrine/DoctrineCacheBundle/zipball/9baecbd6bfdd1123b0cf8c1b88fee0170a84ddd1",
+                "reference": "9baecbd6bfdd1123b0cf8c1b88fee0170a84ddd1",
                 "shasum": ""
             },
             "require": {
@@ -587,7 +587,7 @@
                 "cache",
                 "caching"
             ],
-            "time": "2017-09-29T14:39:10+00:00"
+            "time": "2017-10-12T17:23:29+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -1137,12 +1137,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mark-gerarts/automapper-plus.git",
-                "reference": "db177dbfd25b50f0dfa75c7a6c7b95bf186822bc"
+                "reference": "e417811063f7e60ee97983806feb64b4821f706e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mark-gerarts/automapper-plus/zipball/db177dbfd25b50f0dfa75c7a6c7b95bf186822bc",
-                "reference": "db177dbfd25b50f0dfa75c7a6c7b95bf186822bc",
+                "url": "https://api.github.com/repos/mark-gerarts/automapper-plus/zipball/e417811063f7e60ee97983806feb64b4821f706e",
+                "reference": "e417811063f7e60ee97983806feb64b4821f706e",
                 "shasum": ""
             },
             "require": {
@@ -1174,7 +1174,12 @@
                 }
             ],
             "description": "An AutoMapper for PHP",
-            "time": "2017-10-11T16:47:10+00:00"
+            "keywords": [
+                "automapper",
+                "converter",
+                "object-to-object"
+            ],
+            "time": "2017-10-14T07:45:06+00:00"
         },
         {
             "name": "mark-gerarts/automapper-plus-bundle",
@@ -1182,12 +1187,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mark-gerarts/automapper-plus-bundle.git",
-                "reference": "a30de0bfbed692ddc768dce841fa27e31a1a86e5"
+                "reference": "6e00c99124defdc4e5eba05ef4bc1918f73b00e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mark-gerarts/automapper-plus-bundle/zipball/a30de0bfbed692ddc768dce841fa27e31a1a86e5",
-                "reference": "a30de0bfbed692ddc768dce841fa27e31a1a86e5",
+                "url": "https://api.github.com/repos/mark-gerarts/automapper-plus-bundle/zipball/6e00c99124defdc4e5eba05ef4bc1918f73b00e7",
+                "reference": "6e00c99124defdc4e5eba05ef4bc1918f73b00e7",
                 "shasum": ""
             },
             "require": {
@@ -1218,7 +1223,7 @@
                 "automapper",
                 "bundle"
             ],
-            "time": "2017-10-12T15:46:51+00:00"
+            "time": "2017-10-12T20:19:21+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -1639,21 +1644,21 @@
         },
         {
             "name": "sensio/framework-extra-bundle",
-            "version": "v3.0.27",
+            "version": "v3.0.28",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioFrameworkExtraBundle.git",
-                "reference": "2651d2c70c5fec10beaa670c61fd8ff1e8b3869a"
+                "reference": "65eadf9e3fd5c47eee7986b306a5aed8affe6496"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/2651d2c70c5fec10beaa670c61fd8ff1e8b3869a",
-                "reference": "2651d2c70c5fec10beaa670c61fd8ff1e8b3869a",
+                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/65eadf9e3fd5c47eee7986b306a5aed8affe6496",
+                "reference": "65eadf9e3fd5c47eee7986b306a5aed8affe6496",
                 "shasum": ""
             },
             "require": {
                 "doctrine/common": "~2.2",
-                "symfony/dependency-injection": "~2.3|~3.0|~4.0",
+                "symfony/dependency-injection": "~2.3|~3.0",
                 "symfony/framework-bundle": "~2.3|~3.0|~4.0"
             },
             "require-dev": {
@@ -1705,7 +1710,7 @@
                 "annotations",
                 "controllers"
             ],
-            "time": "2017-08-23T12:40:59+00:00"
+            "time": "2017-10-12T17:37:20+00:00"
         },
         {
             "name": "sensiolabs/security-checker",

@@ -1,4 +1,5 @@
-demo.home:
-    path:     '/'
-    defaults:
-        _controller: demo.index_controller
+default:
+    resource: 'routing/default.yml'
+blog:
+    resource: 'routing/blog.yml'
+    prefix: /blog
