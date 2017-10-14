@@ -2,3 +2,8 @@ demo.blog.index:
     path:       '/'
     defaults:
         _controller: demo.blog.index
+
+demo.blog.create:
+    path:       '/new'
+    defaults:
+        _controller: demo.blog.create

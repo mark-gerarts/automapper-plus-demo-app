@@ -25,6 +25,25 @@ class Post
     private $body;
 
     /**
+     * @var \DateTime
+     */
+    private $created;
+
+    /**
+     * @var \DateTime
+     */
+    private $updated;
+
+    /**
+     * Post constructor.
+     */
+    public function __construct()
+    {
+        $this->created = $this->created ?: new \DateTime();
+        $this->updated = new \DateTime();
+    }
+
+    /**
      * @return int
      */
     public function getId(): int
@@ -70,5 +89,37 @@ class Post
     public function setBody(string $body)
     {
         $this->body = $body;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getCreated(): \DateTime
+    {
+        return $this->created;
+    }
+
+    /**
+     * @param \DateTime $created
+     */
+    public function setCreated(\DateTime $created)
+    {
+        $this->created = $created;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getUpdated(): \DateTime
+    {
+        return $this->updated;
+    }
+
+    /**
+     * @param \DateTime $updated
+     */
+    public function setUpdated(\DateTime $updated)
+    {
+        $this->updated = $updated;
     }
 }

@@ -2,6 +2,7 @@
 
 namespace Demo\Repository;
 
+use Demo\Model\Post;
 use Doctrine\ORM\EntityRepository;
 
 /**
@@ -19,5 +20,17 @@ class PostRepository extends EntityRepository implements PostRepositoryInterface
         return $this->createQueryBuilder('p')
             ->getQuery()
             ->getResult();
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function insert(Post $post): int
+    {
+        $em = $this->getEntityManager();
+        $em->persist($post);
+        $em->flush();
+
+        return $post->getId();
     }
 }

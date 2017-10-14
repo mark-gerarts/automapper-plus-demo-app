@@ -12,3 +12,7 @@ Demo\Model\Post:
             length: 255
         body:
             type: text
+        created:
+            type: datetime
+        updated:
+            type: datetime

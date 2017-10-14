@@ -1,0 +1,10 @@
+services:
+    demo.form.create_post:
+        class: Symfony\Component\Form\Form
+        factory: ['@form.factory', create]
+        arguments:
+            - 'Demo\Form\CreatePostType'
+            - '@demo.form.type.create_post'
+    demo.form.type.create_post:
+        class: Demo\ViewModel\Post\CreatePostViewModel
+        private: true

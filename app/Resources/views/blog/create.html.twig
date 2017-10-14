@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>Create new post</h1>
+                {{ form_start(form) }}
+                    {{ form_widget(form) }}
+
+                <a class="btn btn-default" type="reset" href="{{ path('demo.blog.index') }}">Cancel</a>
+                <button class="btn btn-success" type="submit">Submit</button>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

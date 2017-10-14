@@ -24,29 +24,28 @@ class IndexController
      * @var PostRepositoryInterface
      */
     private $postRepository;
-
     /**
      * @var AutoMapperInterface
      */
-    private $autoMapper;
+    private $mapper;
 
     /**
      * IndexController constructor.
      *
      * @param PostRepositoryInterface $postRepository
-     * @param AutoMapperInterface $autoMapper
+     * @param AutoMapperInterface $mapper
      * @param EngineInterface $templating
      */
     function __construct
     (
         PostRepositoryInterface $postRepository,
-        AutoMapperInterface $autoMapper,
+        AutoMapperInterface $mapper,
         EngineInterface $templating
     )
     {
         $this->postRepository = $postRepository;
         $this->templating = $templating;
-        $this->autoMapper = $autoMapper;
+        $this->mapper = $mapper;
     }
 
     /**
@@ -56,7 +55,7 @@ class IndexController
     public function __invoke(Request $request)
     {
         $allPosts = $this->postRepository->findAll();
-        $allPosts = $this->autoMapper->mapMultiple($allPosts, PostListViewModel::class);
+        $allPosts = $this->mapper->mapMultiple($allPosts, PostListViewModel::class);
 
         return $this->templating->renderResponse('blog/index.html.twig', [
             'posts' => $allPosts

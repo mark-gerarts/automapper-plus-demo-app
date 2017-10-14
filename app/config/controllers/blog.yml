@@ -5,3 +5,12 @@ services:
             - '@demo.repository.post'
             - '@automapper_plus.mapper'
             - '@templating'
+
+    demo.blog.create:
+        class: Demo\Controller\Blog\CreatePostController
+        arguments:
+            - '@demo.form.create_post'
+            - '@templating'
+            - '@router.default'
+            - '@automapper_plus.mapper'
+            - '@demo.repository.post'

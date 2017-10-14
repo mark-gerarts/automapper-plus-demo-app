@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b3c83aaada27375f6c0666e5c6db26e3",
+    "content-hash": "7aeaf062699be039a2337e277d53935a",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -1137,12 +1137,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mark-gerarts/automapper-plus.git",
-                "reference": "e417811063f7e60ee97983806feb64b4821f706e"
+                "reference": "52fdc1730f185ce0eafa3b8a8bfe7dfb45451623"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mark-gerarts/automapper-plus/zipball/e417811063f7e60ee97983806feb64b4821f706e",
-                "reference": "e417811063f7e60ee97983806feb64b4821f706e",
+                "url": "https://api.github.com/repos/mark-gerarts/automapper-plus/zipball/52fdc1730f185ce0eafa3b8a8bfe7dfb45451623",
+                "reference": "52fdc1730f185ce0eafa3b8a8bfe7dfb45451623",
                 "shasum": ""
             },
             "require": {
@@ -1179,7 +1179,7 @@
                 "converter",
                 "object-to-object"
             ],
-            "time": "2017-10-14T07:45:06+00:00"
+            "time": "2017-10-14T16:08:41+00:00"
         },
         {
             "name": "mark-gerarts/automapper-plus-bundle",
@@ -2269,16 +2269,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v3.3.10",
+            "version": "v3.3.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "cfef3b2d505ae4375b17032bd03ed9a3da4b7b43"
+                "reference": "a9d2f68ae9946000e2bcc3403d218ec0124f992a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/cfef3b2d505ae4375b17032bd03ed9a3da4b7b43",
-                "reference": "cfef3b2d505ae4375b17032bd03ed9a3da4b7b43",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/a9d2f68ae9946000e2bcc3403d218ec0124f992a",
+                "reference": "a9d2f68ae9946000e2bcc3403d218ec0124f992a",
                 "shasum": ""
             },
             "require": {
@@ -2418,7 +2418,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2017-10-05T23:40:32+00:00"
+            "time": "2017-09-11T16:13:42+00:00"
         },
         {
             "name": "twig/twig",
