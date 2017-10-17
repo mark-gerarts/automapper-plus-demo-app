@@ -1,3 +1,4 @@
 $config
     ->registerMapping(Post::class, EditPostViewModel::class)
+    ->dontSkipConstructor()
     ->reverseMap();

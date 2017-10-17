@@ -27,24 +27,25 @@ class AutoMapperConfig implements AutoMapperConfiguratorInterface
     public function configure(AutoMapperConfigInterface $config): void
     {
         // List view.
-        $config
-            ->registerMapping(Post::class, PostListViewModel::class)
+        $config->registerMapping(Post::class, PostListViewModel::class)
             ->forMember('created', function (Post $source) {
                 return $source->getCreated()->format('j F, Y');
             });
 
-        // Detail view
+        // Detail view.
         $config->registerMapping(Post::class, PostDetailViewModel::class)
             ->forMember('created', function (Post $source) {
                 return $source->getCreated()->format('j F, Y');
             });
 
         // Create.
-        $config->registerMapping(CreatePostViewModel::class, Post::class);
+        $config->registerMapping(CreatePostViewModel::class, Post::class)
+            ->dontSkipConstructor();
 
         // Update.
         $config
             ->registerMapping(Post::class, EditPostViewModel::class)
+            ->dontSkipConstructor()
             ->reverseMap();
     }
 }

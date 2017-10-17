@@ -1,4 +1,3 @@
-$config->registerMapping(
-    CreatePostViewModel::class,
-    Post::class
-);
+$config
+    ->registerMapping(CreatePostViewModel::class, Post::class)
+    ->dontSkipConstructor();
