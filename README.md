@@ -31,7 +31,7 @@ following steps:
 ```bash
 $ git clone https://github.com/mark-gerarts/automapper-plus-bundle.git
 $ cd automapper-plus-bundle
-$ mkdir var/data;
+$ mkdir var/data
 $ composer install
 $ bin/console doctrine:schema:force
 $ bin/console server:start
