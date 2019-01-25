@@ -13,7 +13,8 @@ small, all the config resides in a single file. Should the complexity of your
 app grow, it might be desired to split the config.
 - **[The config service definition](https://github.com/mark-gerarts/automapper-plus-demo-app/blob/master/app/config/services/services.yml)**:<br>
 For a configurator to be recognized, it has to be tagged with 
-`automapper_plus.configurator`.
+`automapper_plus.configurator`. If you have autowiring enabled, this will be
+handled automatically.
 - **[The ViewModel directory](https://github.com/mark-gerarts/automapper-plus-demo-app/tree/master/src/Demo/ViewModel/Post)**:<br>
 This is where the viewmodels for the Post entity are defined.
 - **[The form types](https://github.com/mark-gerarts/automapper-plus-demo-app/tree/master/src/Demo/Form)**:<br>
