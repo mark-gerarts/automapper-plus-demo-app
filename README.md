@@ -20,10 +20,6 @@ This is where the viewmodels for the Post entity are defined.
 - **[The form types](https://github.com/mark-gerarts/automapper-plus-demo-app/tree/master/src/Demo/Form)**:<br>
 These are attached to the viewmodels instead of the entity.
 
-**Note**: you'll notice that this demo doesn't follow the Symfony standards by
- using a no-bundle approach. The architecture follows the core concepts
- explained in [this post by Elnur Abdurrakhimov](http://elnur.pro/symfony-without-bundles/).
-
 ## Running the app
 The main goal of this project is to provide you some code to browse through. 
 Should you want to run the application yourself, you'll need to perform 
