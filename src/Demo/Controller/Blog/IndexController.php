@@ -36,7 +36,7 @@ class IndexController
      * @param AutoMapperInterface $mapper
      * @param EngineInterface $templating
      */
-    function __construct
+    public function __construct
     (
         PostRepositoryInterface $postRepository,
         AutoMapperInterface $mapper,

@@ -49,7 +49,7 @@ class EditPostController
      * @param AutoMapperInterface $mapper
      * @param PostRepositoryInterface $postRepository
      */
-    function __construct
+    public function __construct
     (
         Form $editPostForm,
         EngineInterface $templating,

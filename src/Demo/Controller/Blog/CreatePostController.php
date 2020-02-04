@@ -50,7 +50,7 @@ class CreatePostController
      * @param AutoMapperInterface $mapper
      * @param PostRepositoryInterface $postRepository
      */
-    function __construct
+    public function __construct
     (
         Form $createPostForm,
         EngineInterface $templating,

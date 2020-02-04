@@ -25,4 +25,6 @@ class EditPostViewModel
      * @Assert\NotBlank()
      */
     public $body;
+
+    public $created;
 }

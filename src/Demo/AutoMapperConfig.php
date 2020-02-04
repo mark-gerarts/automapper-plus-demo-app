@@ -46,6 +46,9 @@ class AutoMapperConfig implements AutoMapperConfiguratorInterface
         $config
             ->registerMapping(Post::class, EditPostViewModel::class)
             ->dontSkipConstructor()
-            ->reverseMap();
+            ->reverseMap()
+            ->forMember('updated', function() {
+                return new \DateTime();
+            });
     }
 }
